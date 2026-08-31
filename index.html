@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles/main.css">
+    <script type="module" src="Scripts/main.js"></script>
+    <title>Calculadora de Cuota Mensual</title>
+</head>
+<body>
+    <h1>Calculadora de Cuota Mensual</h1>   
+    <main>
+        <section class="laInfo">
+            <div>
+                <table class="datos_entrada">
+                    <caption>Datos de la Cuota</caption>  
+                    <tr>
+                        <td>Valor del préstamo</td>
+                        <td>
+                            <input type="number" value="" id="valorPrestamo" name="valorPrestamo">
+                        </td>
+                    </tr>   
+                    <tr>
+                        <td>Tasa de Interés (%)</td>
+                        <td>
+                            <input type="number" value="" id="tasaInteres" placeholder="Escriba la tasa de interés">
+                        </td>
+                    </tr>                     
+                    <tr>
+                        <td>Plazo (meses)</td>
+                        <td>
+                            <input type="number" value="" id="plazoMeses">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Nombre</td>
+                        <td>
+                            <input type="text" value="" id="nombre">
+                        </td>
+                    </tr>                                
+                </table>
+            </div>
+            <div class="error" id="error"></div>
+            <div>
+                <textarea id="laRespuesta" readonly>Salida---</textarea>
+            </div>
+            <div>
+                <button id="calcular">Calcular Cuota</button> 
+            </div>
+        </section>
+    </main>
+</body>
+</html>
