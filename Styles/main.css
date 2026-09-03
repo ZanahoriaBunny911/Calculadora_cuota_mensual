@@ -135,3 +135,26 @@ button#calcular:hover {
 button#calcular:active {
     transform: scale(0.98);
 }
+
+button#historial {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background-color: #0ea5e9;
+    color: #0f172a; /* Texto oscuro sobre botón brillante para alto contraste */
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+button#historial:hover {
+    background-color: #38bdf8;
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.3);
+}
+
+button#historial:active {
+    transform: scale(0.98);
+}

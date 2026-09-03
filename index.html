@@ -17,25 +17,25 @@
                     <tr>
                         <td>Valor del préstamo</td>
                         <td>
-                            <input type="number" value="" id="valorPrestamo" name="valorPrestamo">
+                            <input type="text" inputmode="decimal" id="valorPrestamo" placeholder="$0" name="valorPrestamo">
                         </td>
                     </tr>   
                     <tr>
                         <td>Tasa de Interés (%)</td>
                         <td>
-                            <input type="number" value="" id="tasaInteres" placeholder="Escriba la tasa de interés">
+                            <input type="text" inputmode="decimal" id="tasaInteres" placeholder="0.1">
                         </td>
                     </tr>                     
                     <tr>
                         <td>Plazo (meses)</td>
                         <td>
-                            <input type="number" value="" id="plazoMeses">
+                            <input type="text" inputmode="decimal" id="plazoMeses" placeholder="12">
                         </td>
                     </tr>
                     <tr>
                         <td>Nombre</td>
                         <td>
-                            <input type="text" value="" id="nombre">
+                            <input type="text" value="" id="nombre" placeholder="John Doe">
                         </td>
                     </tr>                                
                 </table>
@@ -46,6 +46,7 @@
             </div>
             <div>
                 <button id="calcular">Calcular Cuota</button> 
+                <button id="historial">Ver Historial</button>
             </div>
         </section>
     </main>

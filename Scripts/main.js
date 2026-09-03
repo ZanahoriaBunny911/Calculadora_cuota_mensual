@@ -1,9 +1,15 @@
 
-import {calcularCuotaMensual} from './functions.js';
+import {calcularCuotaMensual, historialObjetos, guardarHistorial, mostrarHistorial} from './functions.js';
 
 const btnCalcular = document.getElementById("calcular");
-btnCalcular.addEventListener('click',ingresarDatos);
+btnCalcular.addEventListener('click',ingresarDatos,);
 
+const btnHistorial = document.getElementById("historial");
+const laRespuesta = document.getElementById("laRespuesta");
+btnHistorial.addEventListener('click', () => {
+    const historial = mostrarHistorial();
+    laRespuesta.value = historial;
+});
 
 let info = ''
 let tARespuesta = document.getElementById("laRespuesta");
@@ -23,7 +29,10 @@ function ingresarDatos(){
         console.log(res);
     }else{
     document.getElementById("error").innerHTML = "";
-    res = calcularCuotaMensual(prestamo, n, i, nombre);
+    let cuotaNum = calcularCuotaMensual(prestamo, n, i);
+    guardarHistorial(prestamo, n, i, nombre, cuotaNum);
+    res =`${nombre} debe pagar $${cuotaNum.toFixed(2)} cada mes por el préstamo de $${prestamo.toFixed(2)} a ${n} meses con el interés del ${(i * 100).toFixed(1)}%`;
+    
     info +=  res +'\n';
     tARespuesta.value = info;
     }
