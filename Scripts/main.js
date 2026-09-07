@@ -2,13 +2,19 @@
 import {calcularCuotaMensual, historialObjetos, guardarHistorial, mostrarHistorial} from './functions.js';
 
 const btnCalcular = document.getElementById("calcular");
-btnCalcular.addEventListener('click',ingresarDatos,);
-
 const btnHistorial = document.getElementById("historial");
 const laRespuesta = document.getElementById("laRespuesta");
+const btnReportes = document.getElementById("reportes");
+const panel = document.getElementById("panel_reportes");
+
+btnCalcular.addEventListener('click',ingresarDatos);
 btnHistorial.addEventListener('click', () => {
     const historial = mostrarHistorial();
     laRespuesta.value = historial;
+});
+
+btnReportes.addEventListener('click', () => {
+    panel.classList.toggle("panel-visible");
 });
 
 let info = ''

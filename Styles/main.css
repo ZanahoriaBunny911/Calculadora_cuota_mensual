@@ -150,11 +150,61 @@ button#historial {
     transition: all 0.2s ease;
 }
 
-button#historial:hover {
+button#reportes:hover {
     background-color: #38bdf8;
     box-shadow: 0 0 15px rgba(56, 189, 248, 0.3);
 }
 
-button#historial:active {
+button#reportes:active {
     transform: scale(0.98);
+}
+
+button#reportes {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background-color: #0ea5e9;
+    color: #0f172a; /* Texto oscuro sobre botón brillante para alto contraste */
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+
+.contenedor-reportes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.panel-oculto {
+    display: none; /* Esto hace que no ocupe espacio visual inicialmente */
+    flex-direction: column;
+    gap: 8px;
+    padding-top: 10px;
+}
+
+.panel-visible {
+    display: flex;
+}
+
+.panel-oculto button {
+    background-color: #27272a;
+    color: #38bdf8;
+    border: 1px solid #3f3f46;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.875rem;
+    text-align: left;
+    transition: all 0.2s ease;
+}
+
+.panel-oculto button:hover {
+    background-color: #3f3f46;
+    border-color: #0ea5e9;
 }
